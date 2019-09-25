@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+        var today=new Date();
+        var lastdate=new Date();
+        lastdate.setFullYear(2019,8,30)
+        alert ("Today's date:"+today);
+        alert ("Last date:"+lastdate);
+        if(lastdate>today){
+            var days=1000*60*60*24;
+            var left=(lastdate-today)/days;
+            alert("application is live for "+left+"days")
+        }
+        else{
+            alert("time is up")
+        }
+        </script>
+    </body>
+</html>

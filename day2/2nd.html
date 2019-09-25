@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function add2Numbers(){
+
+            var result= confirm("do you want to continue?");
+            if(result==true){
+
+                var n1=parseInt(prompt("enter first number","0"));        
+                var n2=parseInt(prompt("enter second number","0"));
+        // n=parseInt(n1)+parseInt(n2);
+        //alert(n1+"+"+n2+"="+(parseInt(n1)+parseInt(n2)));
+                alert(`${n1}+${n2}=${(parseInt(n1)+parseInt(n2))}`);// using expression
+            }
+            else{
+                alert("thanks");
+            }
+        }
+        function display(){
+            alert("hey");// use 'for' for iteration
+            var d= new Date();
+            if(d.getHours()>12){
+                alert("good afternoon");
+            }
+            else if(d.getHours()>18){
+                alert("good evening");
+            }
+            else if(d.getHours()>21)
+            {
+                alert("good night");
+            }
+            else{
+                alert("good morning")
+            }
+        }    
+        function roomTemp(temp){
+            alert(temp)
+        }
+
+        </script>
+    </head>
+    <body>
+        <input type="button" value="addNumbers" onclick="add2Numbers()">
+        <input type="button" value="displayMessage" onclick="display()">
+
+        <input type="button" value="RoomTemp1" onclick="roomTemp(25)">
+        <input type="button" value="RoomTemp2" onclick="roomTemp(35)">
+    </body>
+</html>
