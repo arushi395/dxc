@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function changeImage(index,imgage){
+                
+                document.images[index].src=imgage
+            }
+        </script>
+    </head>
+    <body>
+        <img src="dxc.jpg"><br/>
+        <input type="button" name="Apple" value="Apple" onclick="changeImage(0,'apple.jpg')" onmouseover="changeImage(0,'dxc.jpg')">
+<br/>
+        <img src="dxc.jpg"><br/>
+        <input type="button" name="Ball" value="Ball" onclick="changeImage(1,'ball.jpg')"  onmouseover="changeImage(1,'dxc.jpg')">
+        <br/>
+        <img src="dxc.jpg"><br/>
+        <input type="button" name="Cat" value="Cat" onclick="changeImage(2,'cat.jpg')" onmouseover="changeImage(2,'dxc.jpg')">
+        
+    </body>
+</html>
