@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function check()// use with(document.forms[0])
+            {
+                var val=document.getElementById("val")
+                if(val=='YES')
+                {
+                    alert("feedback successfully recorded");
+                }
+                else{
+                    
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="successful_feedback.html">
+            Name : <input type="text" name="uname" id="uname"><br/>
+            Address : <input type="text" name="address" id="address"><br/>
+            Do you like our site :<input type ="radio" name="val" id="yes" value="yes" />YES
+                                  <input type ="radio" name="val" id="no" value="no"/>NO
+
+            Tell us how we can make this site better for you:<br/>
+            <input type="checkbox" name="feed" id="feed" value="Change the bg color"/>Change the bg color<br/>
+            <input type="checkbox" name="feed" id="feed" value="Change the bg color"/>Change the bg color<br/>
+            <input type="checkbox" name="feed" id="feed" value="Change the bg color"/>Change the bg color<br/>
+            <input type="checkbox" name="feed" id="feed" value="Change the bg color"/>Change the bg color<br/>
+            <input type="button" name="Submit" value="Submit" onclick="check()"
+        </form>
+    </body>
+</html>

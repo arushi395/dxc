@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        res=0;
+            function addSelect(inp,sel){
+                len = sel.options.length;
+                option0 = new Option(inp.value, inp.value);
+                
+                sel.options[len] = option0;
+            }
+            function selectedOption(selectList,checkoutList){
+
+                i=selectList.options.selectedIndex
+                addSelect(selectList.options[i],this.checkoutList)
+                
+                //code to delete  selected name from the select list 
+                len=selectList.length
+                var res=selectList.options[i].text
+                for (i = 0; i < len; i++) {
+                if (selectList.options[i].value == res ) {
+                    selectList.options[i] = null;
+                    break;
+                }
+            }
+        }
+
+    
+        </script>
+    </head>
+    <body>
+        
+        <form name=f>
+            Enter : <input type="text" onblur="addSelect(this, this.form.selectList)">
+            <select  name="selectList" id="selectList" >
+                <option value="---">SelectList</option>
+                
+            <input type="button" name="checkout" value="Checkout"  onclick="selectedOption(this.form.selectList,this.form.checkoutList)">
+            <select name="checkoutList" id="checkoutList" >
+                <option value="---">CheckoutList</option>
+            </select>
+
+        </form>
+    </body>
+</html>
