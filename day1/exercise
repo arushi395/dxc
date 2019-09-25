@@ -1,0 +1,13 @@
+<html>
+<head>
+<title> Welcome </title>
+</head>
+<body bgcolor= "black" text="white">
+<!-- demo -->
+<h1><center> arushi mishra </h1>
+hello <br/>Welcome
+<hr size="20" color="yellow"/>
+<p allign ="center">Image </p>
+<p allign ="center"><ing src="download.jpg" height="150" width="100"></p>
+</body>
+</html>
