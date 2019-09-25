@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title> Customer form </title>
+    <script>
+        function check(){
+            var span1=document.getElementById("s1")
+            var span2=document.getElementById("s2")
+            var uname=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+            if(uname.length==0){
+                span1.innerHTML="<font color=red>Please enter a valid user name </font>"
+                return false
+            }
+            else{
+                span1.innerText="";
+            }
+            if(password.length==0){
+                span2.innerHTML="<font color=red>Password is Mandatory </font>"
+                return false
+            }
+            else if(password.length<6 || password.length>12){ 
+                span2.innerHTML="<font color=red>Password should be between 6 to 12 characters </font>"
+                return false
+            }
+            else if(password.charAt(0)!='A'){
+                span2.innerHTML="<font color=red>Password should start with 'A' </font>"
+                return false
+            }
+            else{
+                span2.innerText="";
+            }
+            
+            
+        }
+    </script>
+</head>
+<body bgcolor= "pink" text="black" >
+    
+    <h1><center>Customer Form</center></h1>
+    <form action="success.html" onsubmit="return check()">
+        <table cellspacing="10" cellpadding="10"align="center">
+            <tr>
+                <td>User Name</td>
+                <td><input type ="text" name="username" id="username"></td>
+                <td>
+                    <span id="s1"></span>
+                    </td>
+
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type ="password" name="password" id="password"></td>
+                <td>
+                    <span id="s2"></span>
+                </td>
+            </tr>
+            <tr>
+            <td align="center"><input type="submit" value="Login"></td>
+
+            <td align="center"><input type="reset" value="Clear"></td>
+
+            </tr>
+        </table>
+    </form>
+    </script>
+</body>
+</html>

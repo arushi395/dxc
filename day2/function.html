@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function display(){
+            alert("hey");// use 'for' for iteration
+            var d= new Date();
+            if(d.getHours()>12){
+                alert("good afternoon");
+            }
+            else if(d.getHours()>18){
+                alert("good evening");
+            }
+            else if(d.getHours()>21)
+            {
+                alert("good night");
+            }
+            else{
+                alert("good morning")
+            }
+            }    
+        function roomTemp(){
+            temp=parseInt(prompt("enter the temperature:","0"));
+            //temp= 18
+            return(temp)
+        }
+        function displayTempStatus(){
+            var t = roomTemp();
+            if(t>30){
+                alert("TOO HOT")
+            }
+            else if(t<10){
+                alert("TOO COLD")
+            }
+            else{
+                alert("NORMAL TEMPERATURE")
+            }
+        }
+
+
+        </script>
+    </head>
+    <body>
+        <!--<input type="button" value="addNumbers" onclick="add2Numbers()">-->
+        <input type="button" value="displayMessage" onclick="display()">
+
+        <input type="button" value="RoomTempStatus" onclick="displayTempStatus()">
+        
+    </body>
+</html>
