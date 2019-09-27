@@ -1,0 +1,23 @@
+<!--day 6.. local storage.. if we close the tab, once again if we open it, the previously entered values should be restored-->
+<html>
+    <head>
+        <script type="text/javascript">
+        function setCurrentCity(){
+            var cityName=document.getElementById("cityName").value;
+            localStorage.setItem("cName",cityName);// id name should be in quotes
+
+        }
+        function setCity(){
+            if(localStorage.cName){
+                document.f1.cityName.value=localStorage["cName"]// another way document.getElementById("cityName").value="agra"
+            }//use square brackets with local storage
+        }
+        </script>
+    </head>
+    <body onload="setCity()">
+        <form name="f1">
+        city name: <input type="text" id="cityName" name="cityName" />
+        <input type="button" value="SET" onclick="setCurrentCity()"/>
+    </form>
+    </body>
+</html>
