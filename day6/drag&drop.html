@@ -1,0 +1,29 @@
+<!--drag one of the pictures and place it in the rectangle-->
+<html>
+    <head>
+        <style>
+            #div1{width:350px; height: 100px;padding: 10px;
+            border:1px solid black;}
+        </style>
+        <script>
+            function drag(ev){
+                ev.dataTransfer.setData("text",ev.target.id);// target points the position where it has to be dropped
+            }//dataTransfer is the object used to set and get values
+            function drop(ev){
+                var data= ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));//can directly give the id name intead of data.. but in that case only 1 will work
+            }
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+        </script>
+    </head>
+    <body>
+        <p>Drag the image into the rectangle</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <br/>
+        <img id="drag1" src="cat.jpg" draggable="true" ondragstart="drag(event)" width=320 height=80>
+        <img id="drag2" src="painting.jpg" draggable="true" ondragstart="drag(event)" width=320 height=80>
+        <img id="drag3" src="dxc.jpg" draggable="true" ondragstart="drag(event)" width=320 height=80>
+    </body>
+</html>
