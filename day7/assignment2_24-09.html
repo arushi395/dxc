@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet"
+        href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <title >Customer Form</title>
+        <script type="text/javascript">
+        function check(){
+        var uname=document.getElementById("uname").value;
+        var pass=document.getElementById("password").value;
+        var mob= document.getElementById("mobile").value.length;
+        if(uname!=0){
+            document.getElementById("go").disabled=false;
+        }
+        else{
+            document.getElementById("go").disabled=true;
+        }
+        if(password!=0){
+            document.getElementById("go").disabled=false;
+        }
+        else{
+            document.getElementById("go").disabled=true;
+        }
+        if(mob==10){
+            document.getElementById("go").disabled=false;
+        }
+        else{
+            document.getElementById("go").disabled=true;
+        }
+    
+        }
+        </script>
+    </head>
+    <body onkeyup="check(event)">
+            <form form-name="f1" class="form-group" >
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-3"> User Name* :
+                                <input type="text" name="uname" id="uname" class="form-control">
+                            </div>
+                        </div>
+                            <div class="row">
+                            <div class="col-md-3 col-md-offset-3"> Password* :
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3 col-md-offset-3"> Mobile* :
+                                    <input type="text" name="mobile" id="mobile" class="form-control" maxlength="10">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 col-md-offset-3"> 
+                                    <button class="btn btn-success " id="go" disabled>GO</button>
+                                </div>
+                                <div class="col-md-1 col-md-offset-1"> 
+                                        <button class="btn btn-danger ">CLEAR</button>
+                                </div>
+                            </div>
+        </form>
+    </body>
+</html>

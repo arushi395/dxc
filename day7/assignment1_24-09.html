@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function remaining(){
+            var len=document.getElementById("box").value.length;
+            var data=document.getElementById("d1")
+            rem=15-len;
+            data.innerText=rem+" characters remaining...";
+        }
+        </script>
+    </head>
+    <body>
+        Max 15 characters:
+        <br/>
+        <input type="text" name="box" id="box" maxlength="15" oninput="remaining()"/>
+        <div id="d1"></div>
+    </body>
+</html>

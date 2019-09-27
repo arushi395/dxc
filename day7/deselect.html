@@ -1,0 +1,25 @@
+<html>
+    <head>
+    <script src="jquery-3.4.1.js"></script><!-- can also write in body-->
+    <script>
+        $(document).ready(function(){
+            $("p,h1,h2").click(function(){
+                //disable cut copy paste
+                $('body').bind('cut copy paste',function(e){// attaches one or more event handlers on selected data
+                    alert("Very smart,you can't cut copy paste")
+                    e.preventDefault();
+                });
+                $("body").on("contextmenu",function(e){
+                    alert("You can't right click");
+                    return false;
+                });
+
+                
+            });
+        });
+    </script>  
+    </head>
+    <body>
+        <p>Click to disappear!!!</p>
+    </body>
+</html>

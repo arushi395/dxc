@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <script src="jquery-3.4.1.js"></script><!-- can also write in body-->
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+            $("h3,h1,h2").addClass("blue")
+            $("div").addClass("important")
+            });});
+        
+    </script> 
+    <style type="text/css">
+    .important{font-weight: bold;
+    font-size: xx-large;}
+    .blue{color:blue;}
+    
+    </style> 
+    </head>
+    <body>
+        <h1>Click to disappear!!!</h1>
+        <h2>helloooooooooo</h2>
+        <h3>Click on me too!!</h3>
+        <div>wow!!!!!!!</div>
+        <button>click</button>
+    </body>
+</html>

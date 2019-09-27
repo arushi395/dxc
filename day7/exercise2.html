@@ -1,0 +1,22 @@
+<!-- click on the texts present on the screen to make them disappear -->
+<html>
+    <head>
+    <script src="jquery-3.4.1.js"></script><!-- can also write in body-->
+    <script>
+        $(document).ready(function(){
+            $("p,h1,h2").click(function(){
+                alert("you cant select")
+                //$(this).hide();            
+                document.getElementById(this).innerHTML=this.value;// for 1 it will;document.getElementById("id").innerHTML=""
+            });
+        });
+    </script>  
+    </head>
+    <body>
+        <p>Click to disappear!!!</p>
+        <p>helloooooooooo</p>
+        <p>Click on me too!!</p>
+        <h1>wow!!!!!!!</h1>
+        <h2>toggle</h2>
+    </body>
+</html>

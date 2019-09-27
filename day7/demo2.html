@@ -1,0 +1,21 @@
+<!-- box color changes when you enter and leave the text box -->
+<html>
+    <head>
+    <script src="jquery-3.4.1.js"></script><!-- can also write in body-->
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color","green");
+                $(this).css("color","yellow");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","red");
+            });
+        });
+    </script>  
+    </head>
+    <body>
+        Name : <input type="text" name="fullName"><br/>
+        Email :<input type="text" name="email">
+    </body>
+</html>
