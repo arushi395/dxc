@@ -1,0 +1,52 @@
+<html >
+ 
+<head>
+    <script type="text/javascript">
+        var NumOfRow = 1;
+        function Button1_onclick() {
+            NumOfRow++; // get the refference of the main Div
+            var mainDiv = document.getElementById('MainDiv'); // create new div that will work as a container
+            var newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'innerDiv' + NumOfRow); //create span to contain the text
+            var newSpan = document.createElement('span');
+            newSpan.innerHTML = "Enter Your Mail Address "; // create new textbox for email entry
+            var newTextBox = document.createElement('input');
+            newTextBox.type = 'text';
+            newTextBox.setAttribute('id', 'txtAddr' + NumOfRow); // create remove button for each email adress
+ 
+            var newButtonRemove = document.createElement('input');
+            newButtonRemove.type = 'button';
+            newButtonRemove.value = 'Remove';
+            newButtonRemove.id = 'btn' + NumOfRow; // attach event for remove button click
+            newButtonRemove.onclick = function RemoveEntry()
+            {
+                var mainDiv = document.getElementById('MainDiv');
+                mainDiv.removeChild(this.parentNode);
+            } // append the span, textbox and the button
+            var  newButtonDisplay= document.createElement('input');
+            newButtonDisplay.type = 'button';
+            newButtonDisplay.value = 'Display';
+            newButtonDisplay.id = 'dis' + NumOfRow; // attach event for remove button click
+            newButtonDisplay.onclick = function display()
+            {
+                //var idText = document.getElementById(this.parentnode).value
+                var idText= newTextBox.value; //document.getElementById('txtAddr' + NumOfRow).value
+                alert("WELCOME : "+ idText)
+            } // append the span, textbox and the button
+ 
+            newDiv.appendChild(newSpan);
+            newDiv.appendChild(newTextBox);
+            newDiv.appendChild(newButtonRemove); // finally append the new div to the main div
+            newDiv.appendChild(newButtonDisplay);
+            mainDiv.appendChild(newDiv);
+        }
+    </script>
+</head>
+ 
+<body>
+    <div id="MainDiv"> Enter Your Mail Address <input id="txtAddr1" type="text" />
+        <input id="Button1" type="button" value="Add More" onclick="Button1_onclick()" />
+    </div>
+</body>
+ 
+</html>
